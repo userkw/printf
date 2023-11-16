@@ -2,9 +2,9 @@
 
 /**
  * _printf - Custom printf function
- * @format: Format str
+ * @format: Format string
  *
- * Return: Nbr of characters
+ * Return: Number of characters printed (excluding the null byte)
  */
 int _printf(const char *format, ...)
 {
@@ -40,6 +40,7 @@ int _printf(const char *format, ...)
                 default:
                     cnt += _putchar('%');
                     cnt += _putchar(*format);
+                    break;
             }
         }
         else
@@ -53,4 +54,3 @@ int _printf(const char *format, ...)
 
     return cnt;
 }
-
