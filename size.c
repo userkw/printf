@@ -1,26 +1,26 @@
 #include "main.h"
 
 /**
- * get_size - clculates the size
- * @ft: formatted str the args
- * @a: list index of arguments
+ * get_size - Calculates the size to cast the argument
+ * @format: Formatted string in which to print the arguments
+ * @i: List of arguments to be printed.
  *
- * Return: ssize
+ * Return: Precision.
  */
-int get_size(const char *ft, int *a)
+int get_size(const char *format, int *i)
 {
-	int c_i = *a + 1;
-	int sze = 0;
+	int curr_i = *i + 1;
+	int size = 0;
 
-	if (ft[c_i] == 'l')
-		sze = S_LONG;
-	else if (ft[c_i] == 'h')
-		sze = S_SHORT;
+	if (format[curr_i] == 'l')
+		size = S_LONG;
+	else if (format[curr_i] == 'h')
+		size = S_SHORT;
 
-	if (sze == 0)
-		*a = c_i - 1;
+	if (size == 0)
+		*i = curr_i - 1;
 	else
-		*a = c_i;
+		*i = curr_i;
 
-	return (sze);
+	return (size);
 }
