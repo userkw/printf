@@ -54,8 +54,8 @@ int print_ptr(va_list typp, char buff[],
 /************************* PRINT NON PRINTABLE *************************/
 /**
  * print_non_print - printf ascii codes
- * @types: lists of args
- * @buffer: Buffer
+ * @lst: lists of args
+ * @buff: Buffer
  * @flags:  flags
  * @width: get
  * @precision: Precision
